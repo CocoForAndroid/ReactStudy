@@ -8,11 +8,29 @@ export default class TodoList extends React.Component{
             list:[]
         }
         this.handleChange = this.handleChange.bind(this)
+
+        this.textInput = null
+        this.textInputRef = element =>{
+            this.textInput = element
+        }
+    }
+    componentWillMount(){
+        //组件即将被挂载
+        console.log('will mount')
+    }
+    componentDidMount(){
+        //组件已经挂载
+        console.log('did mount')
+    }
+    componentDidUpdate(){
+       //组件已经更新
+       console.log('did update')     
     }
     render(){
+        console.log('render')
         return(
             <Fragment>
-                <input value={this.state.inputValue} onChange={this.handleChange}></input>
+                <input value={this.state.inputValue} onChange={this.handleChange} ref={this.textInputRef}></input>
                 <button onClick={this.handleOnClick.bind(this)}>提交</button>
                 <ul>
                     {
