@@ -1,7 +1,6 @@
-const defaultState = {
+import headerReducer from '../common/header/store/reducer'
+import { combineReducers } from 'redux-immutable'
 
-}
-
-export default (state = defaultState,action)=>{
-    return state
-}
+export default combineReducers({
+    header:headerReducer
+})
