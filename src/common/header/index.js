@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {CSSTransition} from "react-transition-group";
 import {Addition, Button, HeaderWrapper, Logo, Nav, NavItem, NavSearch, SearchWrapper} from "./style";
+import {connect} from "react-redux";
+import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
+import mapDispatchToProps from "react-redux/lib/connect/mapDispatchToProps";
 
 class Header extends Component {
     constructor(props) {
@@ -51,5 +54,9 @@ class Header extends Component {
         );
     }
 }
+//映射state和props
+const mapStateToProps = ()=>{
 
-export default Header;
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Header);
