@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoList from './TodoList'
-import 'antd/dist/antd.css'; 
-
-ReactDOM.render(<TodoList />, document.getElementById('root'));
+import App from './App'
+import './iconfont/iconfont.css'
+ReactDOM.render(<App />, document.getElementById('root'));
 
 
 
