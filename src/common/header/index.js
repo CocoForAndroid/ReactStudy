@@ -49,12 +49,12 @@ class Header extends Component{
                             <NavSearch className={this.props.focused ? 'focused' : ''}
                                 onFocus={this.props.handleFocus}
                                 onBlur={this.props.handleInputBlur} />
-    
+
                         </CSSTransition>
                         <i className={this.props.focused ? 'focused iconfont' : 'iconfont'}>&#xe60b;</i>
                         {this.getListArea(this.props.focused)}
                     </SearchWrapper>
-    
+
                 </Nav>
                 <Addition>
                     <Button className='writing'><i className="iconfont">&#xe61b;</i>写文章</Button>
@@ -62,11 +62,9 @@ class Header extends Component{
                 </Addition>
             </HeaderWrapper>
         );
-    
+
     }
 }
-
- 
 
 
 //映射state和props
@@ -75,7 +73,7 @@ const mapStateToProps = (state) => {
         focused: state.get('header').get('focused')
     }
 }
-const mapDispathToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         handleFocus() {
             dispatch(actionCreator.searchFocus())
@@ -87,4 +85,4 @@ const mapDispathToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

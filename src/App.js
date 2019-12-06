@@ -3,6 +3,9 @@ import {GlobalStyle} from "./style";
 import Header from './common/header'
 import {Provider} from 'react-redux'
 import {store} from './store'
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import Home from './pages/home'
+import Detail from './pages/detail'
 class App extends Component {
     render() {
         return (
@@ -10,6 +13,13 @@ class App extends Component {
                 <div>
                     <GlobalStyle/>
                     <Header/>
+                    <BrowserRouter>
+                        <Switch>
+                            <Route path={'/'} component={Home}/>
+                            <Route path={'/detail'} component={Detail}/>
+                        </Switch>
+                    </BrowserRouter>
+
                 </div>
             </Provider>
         );
@@ -17,3 +27,4 @@ class App extends Component {
 }
 
 export default App;
+
