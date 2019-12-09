@@ -4,12 +4,12 @@ import {connect} from 'react-redux'
 class List extends Component {
 
     render() {
-        const {list} = this.props;
+        const {articleList} = this.props;
         return (
             <div>
                 {
-                    list.map((item)=>{
-                        return(<ListItem>
+                    articleList.map((item)=>{
+                        return(<ListItem key={item.get('id')}>
                             <img
                                 alt=""
                                 className="item-img"
@@ -28,7 +28,7 @@ class List extends Component {
 }
 
 const mapState = (state)=>({
-    list:state.get('home').get('list')
+    articleList:state.get('home').get('articleList')
 })
 
 export default connect(mapState)(List);

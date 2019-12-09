@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const HomeWrapper = styled.div`
     width : 960px
-    margin: 0 auto
+    margin: 56px auto
     overflow:hidden
-`
+`;
 export const HomeLeft = styled.div`
     width : 625px
     margin-left:15px
@@ -15,12 +15,12 @@ export const HomeLeft = styled.div`
         width:100%
         border-radius:10px
         }
-`
+`;
 
 export const HomeRight = styled.div`
-    width : 240px
+    width : 280px
     float:right    
-`
+`;
 
 export const ListItem = styled.div`
     padding:20px 0px
@@ -33,7 +33,7 @@ export const ListItem = styled.div`
         float:right
         border-radius:10px
     }
-`
+`;
 export const ListInfo = styled.div`
     font-size:18px
     width:475px
@@ -51,4 +51,59 @@ export const ListInfo = styled.div`
         margin:15px 10px 8px 0px
         line-height:24px
     }
+`;
+export const RecommendWrapper = styled.div`
+    margin:30px 0
+    width:280px
+`;
+export const RecommendItem = styled.div`
+    width:280px
+    height:50px
+    background:url(${(props)=>props.imgUrl});
+    background-size:contain;
+    margin-bottom:5px
+`;
+export const DownLoadWrapper = styled.div`
+    padding:10px 22px
+    margin-bottom:30px
+    width:100%
+    border:1px solid #f0f0f0
+    align-item:center
+    display:flex
+    background:white
+    .qr-code-style{
+        width:60px
+        height:60px    
+    }
+    .content{
+        align-item:center
+        display:flex
+        margin:5px
+        justify-content:center
+        flex-flow:column
+    }
+`;
+export const WriterWrapper = styled.div`
+    display:flex
+    flex-flow:column no-wrap
+    width:100%
+    .title{
+        width:100%
+        display:flex
+        flex-direction:row
+        font-size:14px
+        color:#969696
+        justify-content:space-between
+    }
+    .list-wrapper{
+        margin-top:10px
+        display:flex
+        flex-direction:column
+    }
+`;
+export const WriterItem = styled.div`
+    display:flex
+    flex-flow:row no-wrap
+    position:relative
+    
 `

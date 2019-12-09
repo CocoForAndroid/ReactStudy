@@ -3,7 +3,11 @@ import logoPic from '../../statics/nav-logo.png'
 
 export const HeaderWrapper = styled.div`
     height:56px;
-    position:relative
+    position:fixed
+    top: 0
+    right:0
+    background:white
+    left:0
     border-bottom:1px solid #f0f0f0
 `
 export const Logo = styled.a`
