@@ -3,7 +3,7 @@ import {fromJS} from 'immutable'
 const defaultState = fromJS({
     recommendList: [],
     articleList: [],
-    writers:[]
+    writers: []
 });
 
 export default (state = defaultState, action) => {
@@ -11,7 +11,8 @@ export default (state = defaultState, action) => {
     if (action.type === 'change_home_data') {
         return state.merge({
             'recommendList': fromJS(action.recommendList),
-            'articleList': fromJS(action.articleList)
+            'articleList': fromJS(action.articleList),
+            'writers': fromJS(action.writers)
         });
     } else {
         return state

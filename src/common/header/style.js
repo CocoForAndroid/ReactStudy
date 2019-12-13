@@ -7,6 +7,7 @@ export const HeaderWrapper = styled.div`
     top: 0
     right:0
     background:white
+    z-index:99
     left:0
     border-bottom:1px solid #f0f0f0
 `

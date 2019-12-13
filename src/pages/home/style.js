@@ -85,10 +85,10 @@ export const DownLoadWrapper = styled.div`
 `;
 export const WriterWrapper = styled.div`
     display:flex
-    flex-flow:column no-wrap
+    flex-flow:column 
     width:100%
     .title{
-        width:100%
+        width:100%     
         display:flex
         flex-direction:row
         font-size:14px
@@ -103,7 +103,34 @@ export const WriterWrapper = styled.div`
 `;
 export const WriterItem = styled.div`
     display:flex
+    margin-top:15px
     flex-flow:row no-wrap
     position:relative
-    
+    .head-img{
+        border-radius:50%
+        height:48px
+        width:48px
+    }
+    .follow{
+        color:#42c02e
+        font-size:13px
+        right:0
+        position:absolute
+    }
+    .user-info{
+        display:flex
+        flex-flow:column
+        margin-left:10px
+        .user-name{
+            color:#333
+            font-size:14px
+            padding-top:5px
+            margin-right:60px
+        }
+        .user-desc{
+            color:#969696
+            font-size:12px
+            margin-top:10px
+        }
+    }  
 `
